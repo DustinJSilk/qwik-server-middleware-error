@@ -1,14 +1,18 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
       <div>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
+        <Link href="/test-route-loader" prefetch={false}>
+          Test routeLoader$ middleware
+        </Link>
+      </div>
+      <div>
+        <Link href="/test-server" prefetch={false}>
+          Test server$ middleware
+        </Link>
       </div>
     </>
   );
